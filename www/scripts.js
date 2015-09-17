@@ -23,10 +23,17 @@ var simplificationTable = [
 ];
 
 var examples = [
+	//Always TRUE
 	"{A} or not {A}",
 	"({A} or {B}) and (not {B}) => {A}",
 	"(not ({A} <-> {B})) <-> (({A} or {B}) and not ({A} and {B}))",
-	"(({A} <-> {B}) and ({B} <-> {C})) => ({A} <-> {C})"
+	"(({A} <-> {B}) and ({B} <-> {C})) => ({A} <-> {C})",
+	
+	//Mixed
+	"{this} or {that}",
+	
+	//Always FALSE
+	"{A} and not {A}"
 ];
 
 var currentExample = -1;
